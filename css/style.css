@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+}
+
+.card{
+    height: 70vh;
+    width: 100%;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+/* Feel free to change duration  */ 
+.animated  {
+    -webkit-animation-duration : 1000 ms  ;
+    animation-duration : 1000 ms  ;
+    -webkit-animation-fill-mode : both  ;
+    animation-fill-mode : both  ;
+  }  
+  /* .owl-animated-out - only for current item */ 
+  /* This is very important class. Use z-index if you want move Out item above In item */ 
+  .owl-animated-out {
+    z-index : 1 
+     }
+  /* .owl-animated-in - only for upcoming item
+  /* This is very important class. Use z-index if you want move In item above Out item */ 
+  .owl-animated-in {
+    z-index : 0 
+     }
+  /* .fadeOut is style taken from Animation.css and this is how it looks in owl.carousel.css:  */ 
+  .fadeOut  {
+    -webkit-animation-name : fadeOut  ;
+    animation-name : fadeOut  ;
+  }  
+  @-webkit-keyframes  fadeOut  {
+    0% {
+      opacity : 1   ;
+    }  
+    100% {
+      opacity : 0   ;
+    }  
+  }
+  @keyframes  fadeOut  {
+    0% {
+      opacity : 1   ;
+    }  
+    100% {
+      opacity : 0   ;
+    }  
+  }
+
+
+  
+  .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .owl-carousel .owl-nav button.owl-prev{
+    left: 5%;
+  }
+  .owl-carousel .owl-nav button.owl-next{
+    right: 5%;
+  }
+  .owl-dots{
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .owl-carousel button.owl-dot{
+    background-color: #ffffff;
+    width: 30px;
+    height: 5px;
+    opacity: 0.5;
+    margin: 0 4px;
+    transition: 0.3s;
+  }
+  .owl-carousel button.owl-dot.active{
+  opacity: 1;
+  }
+  .owl-carousel button.owl-dot:hover{
+    opacity: 1;
+  }
